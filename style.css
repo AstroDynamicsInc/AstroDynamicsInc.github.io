@@ -1,0 +1,269 @@
+@import url(https://fonts.googleapis.com/css2?family=Tilt+Warp&family=Inter);
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt+Warp', serif;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background: lightgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/* full container */
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background: #fff;
+    border-radius: 25px;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+}
+
+/* left container */
+.container .left_Side{
+    position: relative;
+    background: #162722;
+    padding: 40px;
+}
+
+/* profile section */
+.profileText{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+.profileText .imgBx{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.profileText .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileText h2{
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.profileText h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+/*  contact info section */
+.contactInfo{
+    padding-top: 40px;
+}
+.title{
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.contactInfo ul{
+    position: relative;
+}
+.contactInfo ul li{
+    position: relative;
+    list-style: none;
+    margin: 10px;
+    cursor: pointer;
+}
+/* Icons for contact info seperated out to change colors for each icon */
+.contactInfo ul li .icon1{
+    display: inline-block;
+    width: 15px;
+    font-size: 18px;
+    color: darkred;
+    white-space: nowrap; 
+    flex-grow: 1;
+}
+/* removes that ugly underline button from the clickable links */
+.contactInfo ul li a{
+    color: #8EA9A1;
+    text-decoration: none;
+}
+.contactInfo ul li .icon2{
+    display: inline-block;
+    width: 15px;
+    font-size: 18px;
+    color: white;
+    white-space: nowrap; 
+    flex-grow: 1;
+}
+.contactInfo ul li .icon3{
+    display: inline-block;
+    width: 15px;
+    font-size: 18px;
+    color: blueviolet;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+.contactInfo ul li .icon4{
+    display: inline-block;
+    width: 15px;
+    font-size: 18px;
+    color: green;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+.contactInfo ul li span{
+    color: #8EA9A1;
+    font-weight: 80;
+    /* nowrap needed to keep items on 1 line */
+    white-space: nowrap;    
+}
+
+
+/* education segment */
+.contactInfo.education li{
+    margin-bottom: 15px;
+}
+.contactInfo.education h5{
+    color: #fff;
+    font-weight: 500;
+}
+.contactInfo.education h4:nth-child(2){
+    color: #8EA9A1;
+    font-weight: 500;
+}
+.contactInfo.education h4{
+    color: #8EA9A1;
+    font-weight: 300;
+}
+
+
+/* right side container for resume  */
+.container .rightSide{
+    position: relative;
+    background: #EBF0EE;
+    padding: 40px;
+}
+.about {
+    margin-bottom: 50px;
+}
+.about:last-child{
+    margin-bottom: 0;
+}
+.title2{
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+p{
+    color: #162722;
+}
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .year_company{
+    min-width: 150px;
+}
+
+.about .box .year_company h5{
+    text-transform: uppercase;
+    color: #162722;
+    font-weight: 600;
+}
+
+.about .box .text h4{
+    text-transform: uppercase;
+    color: black;
+    font-size: 16px;
+}
+
+/* skills section */
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skills .box h4{
+    text-transform: uppercase;
+    color: #162722;
+    font-weight: 500;
+}
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f00; 
+}
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #162722;
+}
+/* interests section */
+.interests ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.interests ul li{
+    list-style: none;
+    color: #162722;
+    font-weight: 500;
+    margin: 10px 0;
+}
+.interests ul li .fa{
+    color: #f00;
+    font-size: 18px;
+    width: 20px;
+}
+
+@media (max-width: 1000px)
+{
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .interests ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px)
+{
+    .about .box{
+        flex-direction: column;
+    }
+    .about .box .year_company{
+        margin-bottom: 5px;
+    }
+}
